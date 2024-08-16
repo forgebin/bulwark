@@ -1,4 +1,5 @@
--- Library
+-- Original: Vynixius's work
+-- Only modified for the convinience
 
 local Library = {
 	Theme = {
@@ -106,6 +107,11 @@ function Library:Notify(options, callback)
 		Selection = nil,
 		Callback = callback,
 	}
+
+    local sound = Instance.new("Sound", game.SoundService);
+    sound.SoundId = "rbxassetid://17208361335"
+    sound:Play()
+    task.spawn(function() task.wait(sound.TimeLength) sound:Destroy() end)
 
 	Notification.Frame = SelfModules.UI.Create("Frame", {
 		Name = "Notification",
@@ -1001,7 +1007,12 @@ function Library:AddWindow(options)
 
 				Button.Frame.Holder.Button.MouseButton1Up:Connect(function()
 					Button.Frame.Holder.Button.TextSize = 14
-					buttonVisual()
+					buttonVisual()  
+
+                    local sound = Instance.new("Sound", game.SoundService);
+                    sound.SoundId = "rbxassetid://6042053626"
+                    sound:Play()
+                    task.spawn(function() task.wait(sound.TimeLength) sound:Destroy() end)
 
 					pcall(task.spawn, Button.Callback)
 				end)
@@ -1085,6 +1096,10 @@ function Library:AddWindow(options)
 				Toggle.Frame.Holder.InputBegan:Connect(function(input)
 					if input.UserInputType == Enum.UserInputType.MouseButton1 then
 						Toggle:Set(not Tab.Flags[Toggle.Flag], false)
+                        local sound = Instance.new("Sound", game.SoundService);
+                        sound.SoundId = "rbxassetid://9120094547"
+                        sound:Play()
+                        task.spawn(function() task.wait(sound.TimeLength) sound:Destroy() end)
 					end
 				end)
 
