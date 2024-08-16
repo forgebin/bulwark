@@ -108,7 +108,7 @@ function Library:Notify(options, callback)
 		Callback = callback,
 	}
 
-    local sound = Instance.new("Sound", game.SoundService);
+    local sound = Instance.new("Sound", workspace);
     sound.SoundId = "rbxassetid://17208361335"
     sound:Play()
     task.spawn(function() task.wait(sound.TimeLength) sound:Destroy() end)
@@ -1009,7 +1009,7 @@ function Library:AddWindow(options)
 					Button.Frame.Holder.Button.TextSize = 14
 					buttonVisual()  
 
-                    local sound = Instance.new("Sound", game.SoundService);
+                    local sound = Instance.new("Sound", workspace);
                     sound.SoundId = "rbxassetid://6042053626"
                     sound:Play()
                     task.spawn(function() task.wait(sound.TimeLength) sound:Destroy() end)
@@ -1096,7 +1096,7 @@ function Library:AddWindow(options)
 				Toggle.Frame.Holder.InputBegan:Connect(function(input)
 					if input.UserInputType == Enum.UserInputType.MouseButton1 then
 						Toggle:Set(not Tab.Flags[Toggle.Flag], false)
-                        local sound = Instance.new("Sound", game.SoundService);
+                        local sound = Instance.new("Sound", workspace);
                         sound.SoundId = "rbxassetid://9120094547"
                         sound:Play()
                         task.spawn(function() task.wait(sound.TimeLength) sound:Destroy() end)
