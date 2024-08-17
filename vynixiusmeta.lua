@@ -1,26 +1,28 @@
 -- Original: Vynixius's work
 -- Only modified for the convinience
+-- 0.02
 
 local Library = {
-	Theme = {
-		Accent = Color3.fromRGB(0, 255, 0),
-		TopbarColor = Color3.fromRGB(20, 20, 20),
-		SidebarColor = Color3.fromRGB(15, 15, 15),
-		BackgroundColor = Color3.fromRGB(10, 10, 10),
-		SectionColor = Color3.fromRGB(20, 20, 20),
-		TextColor = Color3.fromRGB(255, 255, 255),
-	},
-	Notif = {
-		Active = {},
-		Queue = {},
-		IsBusy = false,
-	},
-	Settings = {
-		ConfigPath = nil,
-		MaxNotifLines = 5,
-		MaxNotifStacking = 5,
-	},
+    Theme = {
+        Accent = Color3.fromRGB(66, 135, 245),        -- Soft blue
+        TopbarColor = Color3.fromRGB(40, 44, 52),     -- Dark slate
+        SidebarColor = Color3.fromRGB(30, 33, 39),    -- Slightly darker slate
+        BackgroundColor = Color3.fromRGB(24, 26, 31), -- Very dark slate
+        SectionColor = Color3.fromRGB(35, 39, 46),    -- Medium slate
+        TextColor = Color3.fromRGB(220, 223, 228),    -- Off-white
+    },
+    Notif = {
+        Active = {},
+        Queue = {},
+        IsBusy = false,
+    },
+    Settings = {
+        ConfigPath = nil,
+        MaxNotifLines = 5,
+        MaxNotifStacking = 5,
+    },
 }
+
 
 -- Services
 
@@ -1864,7 +1866,7 @@ function Library:AddWindow(options)
 							Position = UDim2.new(0, 5, 0, 40),
 							Size = UDim2.new(1, -10, 1, -40),
 							CanvasSize = UDim2.new(0, 0, 0, 0),
-							ScrollBarImageColor3 = SelfModules.UI.Color.Add(Library.Theme.SectionColor, Color3.fromRGB(15, 15, 15)),
+							ScrollBarImageColor3 = SelfModules.UI.Color.Add(Library.Theme.SectionColor, Color3.fromRGB(151, 192, 255)),
 							ScrollBarThickness = 5,
 
 							SelfModules.UI.Create("UIListLayout", {
