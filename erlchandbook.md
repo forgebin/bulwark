@@ -11,7 +11,7 @@ This handbook provides a comprehensive overview of the features available in the
 - **Infinite Jump:** Enables continuous jumping. 🟢
 - **No Drown:** Prevents the player from taking drowning damage.
 - **Infinite Stamina:** Grants unlimited stamina. 
-- **No Viewbobbing:** Removes the head bobbing effect while moving. 🟢
+- **No Viewbobbing:** Removes the head bobbing effect while moving/driving at high speeds. 🟢
 - **No FallDamage/Ragdoll:** Disables fall damage and ragdoll physics. 🟢
 - **Always Allow Reset:** Overrides restrictions on character resets. 🟢
 - **No E Wait:** Removes interaction delays (e.g., for opening doors).
