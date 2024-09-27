@@ -1028,55 +1028,82 @@ function Library:AddWindow(options)
 
 			-- Toggle
 
-			function Section:AddToggle(name, options, callback)
-				local Toggle = {
-					Name = name,
-					Type = "Toggle",
-					Flag = options.flag or name,
-					Callback = callback,
-				}
-
-				Toggle.Frame = SelfModules.UI.Create("Frame", {
-					Name = name,
-					BackgroundColor3 = SelfModules.UI.Color.Add(Library.Theme.SectionColor, Color3.fromRGB(15, 15, 15)),
-					Size = UDim2.new(1, 2, 0, 32),
-
-					SelfModules.UI.Create("Frame", {
-						Name = "Holder",
-						BackgroundColor3 = SelfModules.UI.Color.Add(Library.Theme.SectionColor, Color3.fromRGB(5, 5, 5)),
-						Position = UDim2.new(0, 1, 0, 1),
-						Size = UDim2.new(1, -2, 1, -2),
-
-						SelfModules.UI.Create("TextLabel", {
-							Name = "Label",
-							BackgroundTransparency = 1,
-							Position = UDim2.new(0, 5, 0.5, -7),
-							Size = UDim2.new(1, -50, 0, 14),
-							Font = Enum.Font.Arial,
-							Text = name,
-							TextColor3 = Library.Theme.TextColor,
-							TextSize = 14,
-							TextWrapped = true,
-							TextXAlignment = Enum.TextXAlignment.Left,
-						}),
-
-						SelfModules.UI.Create("Frame", {
-							Name = "Indicator",
-							BackgroundColor3 = SelfModules.UI.Color.Add(Library.Theme.SectionColor, Color3.fromRGB(15, 15, 15)),
-							Position = UDim2.new(1, -42, 0, 2),
-							Size = UDim2.new(0, 40, 0, 26),
-
-							SelfModules.UI.Create("ImageLabel", {
-								Name = "Overlay",
-								BackgroundColor3 = SelfModules.UI.Color.Add(Library.Theme.SectionColor, Color3.fromRGB(25, 25, 25)),
-								Position = UDim2.new(0, 2, 0, 2),
-								Size = UDim2.new(0, 22, 0, 22),
-								Image = "http://www.roblox.com/asset/?id=7827504335",
-								ImageTransparency = 1,
-							}, UDim.new(0, 5)),
-						}, UDim.new(0, 5))
-					}, UDim.new(0, 5)),
-				}, UDim.new(0, 5))
+			function Section:AddToggle(name, options, callback, info)
+                local Toggle = {
+                    Name = name,
+                    Type = "Toggle",
+                    Flag = options.flag or name,
+                    Callback = callback,
+                }
+            
+                Toggle.Frame = SelfModules.UI.Create("Frame", {
+                    Name = name,
+                    BackgroundColor3 = SelfModules.UI.Color.Add(Library.Theme.SectionColor, Color3.fromRGB(15, 15, 15)),
+                    Size = UDim2.new(1, 2, 0, 32),
+            
+                    SelfModules.UI.Create("Frame", {
+                        Name = "Holder",
+                        BackgroundColor3 = SelfModules.UI.Color.Add(Library.Theme.SectionColor, Color3.fromRGB(5, 5, 5)),
+                        Position = UDim2.new(0, 1, 0, 1),
+                        Size = UDim2.new(1, -2, 1, -2),
+            
+                        SelfModules.UI.Create("TextLabel", {
+                            Name = "Label",
+                            BackgroundTransparency = 1,
+                            Position = UDim2.new(0, 5, 0.5, -7),
+                            Size = UDim2.new(1, -50, 0, 14),
+                            Font = Enum.Font.Arial,
+                            Text = name,
+                            TextColor3 = Library.Theme.TextColor,
+                            TextSize = 14,
+                            TextWrapped = true,
+                            TextXAlignment = Enum.TextXAlignment.Left,
+                        }),
+            
+                        SelfModules.UI.Create("Frame", {
+                            Name = "Indicator",
+                            BackgroundColor3 = SelfModules.UI.Color.Add(Library.Theme.SectionColor, Color3.fromRGB(15, 15, 15)),
+                            Position = UDim2.new(1, -42, 0, 2),
+                            Size = UDim2.new(0, 40, 0, 26),
+            
+                            SelfModules.UI.Create("ImageLabel", {
+                                Name = "Overlay",
+                                BackgroundColor3 = SelfModules.UI.Color.Add(Library.Theme.SectionColor, Color3.fromRGB(25, 25, 25)),
+                                Position = UDim2.new(0, 2, 0, 2),
+                                Size = UDim2.new(0, 22, 0, 22),
+                                Image = "http://www.roblox.com/asset/?id=7827504335",
+                                ImageTransparency = 1,
+                            }, UDim.new(0, 5)),
+                        }, UDim.new(0, 5))
+                    }, UDim.new(0, 5)),
+                }, UDim.new(0, 5))
+            
+                -- Create a label for displaying info on hover
+                local InfoLabel = SelfModules.UI.Create("TextLabel", {
+                    Name = "InfoLabel",
+                    BackgroundTransparency = 0.5,
+                    BackgroundColor3 = Color3.fromRGB(30, 30, 30),
+                    TextColor3 = Color3.fromRGB(255, 255, 255),
+                    TextSize = 14,
+                    TextWrapped = true,
+                    Visible = false,
+                    ZIndex = 10,
+                    Parent = Toggle.Frame,
+                })
+            
+                -- Automatically resize the InfoLabel to fit the text
+                InfoLabel.Text = info or "Function"
+                InfoLabel.Size = UDim2.new(0, InfoLabel.TextBounds.X + 10, 0, InfoLabel.TextBounds.Y + 10)
+            
+                -- Hover behavior to show/hide the info label
+                Toggle.Frame.MouseEnter:Connect(function()
+                    InfoLabel.Visible = true
+                    InfoLabel.Position = UDim2.new(0, Toggle.Frame.AbsolutePosition.X + Toggle.Frame.AbsoluteSize.X + 10, 0, Toggle.Frame.AbsolutePosition.Y)
+                end)
+            
+                Toggle.Frame.MouseLeave:Connect(function()
+                    InfoLabel.Visible = false
+                end)
 
 				-- Functions
 
