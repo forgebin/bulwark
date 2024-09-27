@@ -1,112 +1,88 @@
-## Bulwark - ERLC Handbook
+## Bulwark ER:LC Handbook
 
-Before we start, I strived to make as many features work for Solara/Celery. Though, features like No Recoil, Inf Ammo, No Drown etc., are simply not possible. Use Wave for the best experience.
+This handbook provides a comprehensive overview of the features available in the Bulwark cheat script for Emergency Response: Liberty County (ER:LC). Note that certain features may not be compatible with all executors, and some are specifically designed for internal cheats like Wave. Solara, a LuaU-based executor, may have limited support for certain features that rely on advanced functions.
 
-🟢 - Means solara supports this.
+**Feature Breakdown:**
 
-**Player Tab:**
+**Character Modifications:**
 
-* **WARNING:**  I highly suggest you do not use the features in this tab. They are insanely blatant and will most likely get you banned.
+- **WalkSpeed:** Modifies the player's movement speed. 🟢 (BANNABLE, DO NOT USE IF THE ANTI CHEAT WAS NOT PATCHED)
+- **FOV:** Changes the field of view. 🟢
+- **Infinite Jump:** Enables continuous jumping. 🟢
+- **No Drown:** Prevents the player from taking drowning damage.
+- **Infinite Stamina:** Grants unlimited stamina. 
+- **No Viewbobbing:** Removes the head bobbing effect while moving. 🟢
+- **No FallDamage/Ragdoll:** Disables fall damage and ragdoll physics. 🟢
+- **Always Allow Reset:** Overrides restrictions on character resets. 🟢
+- **No E Wait:** Removes interaction delays (e.g., for opening doors).
+- **Fly:** Enables flying capabilities. 🟢 (BANNABLE, DO NOT USE IF THE ANTI CHEAT WAS NOT PATCHED)
+- **No-Clip:** Allows walking through walls and objects. 🟢
 
-* **WalkSpeed:** This feature allows you to increase your walking speed using additive velocity.  Be cautious as using high values is very obvious. 🟢
+**Vehicle Modifications:**
 
-* **FOV:**  Changes your field of view (how much you can see). A higher FOV can make it easier to see around you, but it can also be disorienting.  🟢
+- **(LEGACY) Max Speed:** Modifies vehicle speed. 🟢
+- **(LEGACY) Acceleration:** Modifies vehicle acceleration. 🟢
+- **Anti-Collision:** Disables collisions for other vehicles. 🟢
+- **Infinite Fuel:** Grants unlimited fuel. 🟢
+- **Fling Troll:** Allows flinging vehicles using the mouse. 🟢
+- **Always Slip:** Forces the vehicle to constantly drift. 🟢
+- **SteerMaxTorque:** Adjusts maximum steering torque.
+- **SteerSpeed:** Adjusts steering speed.
+- **BrakeForce:** Adjusts braking force.
+- **FSusStiffness:** Adjusts front suspension stiffness.
+- **RSusStiffness:** Adjusts rear suspension stiffness.
+- **Suspension Stiffness:** Adjusts overall suspension stiffness.
+- **Turbochargers:** Adjusts turbocharger settings (affects acceleration).
+- **Weight:** Adjusts vehicle weight (affects handling).
+- **RSteerMaxTorque:** Adjusts maximum rear steering torque.
+- **RSteerSpeed:** Adjusts rear steering speed.
+- **SteerRatio:** Adjusts steering ratio (affects handling).
+- **BrakeBias:** Adjusts brake balance between front and rear.
+- **Redline:** Adjusts maximum engine RPM.
+- **Horsepower:** Adjusts engine power.
+- **FinalDrive:** Adjusts gear ratio (affects top speed).
+- **T_Boost:** Adjusts boost multiplier.
+- **SuspensionDamping:** Adjusts suspension damping.
 
-* **Infinite Jump:** Allows you to jump infinitely without touching the ground. Extremely blatant. 🟢
+**Weapon Modifications:**
 
-* **Fly:** Enables flying. You can control your movement with WASD keys and adjust the speed with the slider.  **Use with extreme caution!** 🟢
+- **Aimbot Enabled:** Enables or disables the aimbot. 🟢
+- **Target Body Part:** Selects the body part to aim at (Head or HumanoidRootPart). 🟢
+- **Wall Check:** Enables or disables wall checks (aimbot). 🟢
+- **Team Check:** Enables or disables team checks (aimbot). 🟢
+- **Only Hostiles:** Enables or disables aiming at only hostile teams (aimbot). 🟢
+- **FOV Circle:** Adjusts the aimbot's field of view circle size. 🟢
+- **Rapid Fire:** Increases weapon fire rate.
+- **Instant Reload:** Makes reloading instantaneous.
+- **Inf Ammo:** Grants unlimited ammunition.
+- **No Recoil:** Removes weapon recoil.
 
-* **No-Clip:** Allows you to walk through walls and objects. 🟢
+**Teleports:**
 
-* **No-Drown:** Allows you to go underwater and not die.
-* **No-Ragdoll:** Doesn't allow you to ragdoll. 🟢
-* **Inf Stamina:** Gives you inf stamina.
+- **Teleport Place:** Select a location from the dropdown menu to teleport to. 🟢
+- **Teleport With Vehicle:** Enables or disables teleporting with the current vehicle. 🟢
+- **Teleport:** Executes the teleport action. 🟢
 
-**Vehicle Tab:**
+**Miscellaneous:**
 
-* **(LEGACY) Max Speed:**  Increases the maximum speed of your vehicle. May be unstable. This does not actually increase the max speed of the car. This is a solara function, and we only apply velocity to the car directly. 🟢
+- **Time Of Day:** Changes the in-game time. 🟢
+- **ESP:** Enables or disables ESP to see players through walls. 🟢
+- **Tracers:** Enables or disables tracers that draw lines to players. 🟢
+- **Invisible:** Enables the ability to become invisible by pressing X. 🟢
+- **Auto-Arrest:** Enables or disables automatic arrest of the highest-wanted player. 🟢
+- **Arrest Aura:** Enables or disables arrest aura that arrests all nearby civilians. 🟢
+- **Guaranteed Lockpick:** Ensures successful lockpicking attempts.
+- **Guaranteed Glass Cut:** Ensures successful jewelry store robberies.
+- **Respawn:** Instantly respawns the player. 🟢
+- **Remove Street Lamps:** Removes all street lamps from the map. 🟢
+- **Remove Trees:** Removes all trees from the map. 🟢
+- **Remove Deployables:** Removes all deployables from the map. 🟢
+- **Remove Traffic Detection:** Removes traffic detection systems and traffic lights. 🟢
 
-* **(LEGACY) Acceleration:** Increases the acceleration of your vehicle. May be unstable. Used with Max Speed enabled. 🟢
+**GUI Settings:**
 
-* **Wheel Height:** Modifies the height of your vehicle's wheels. 🟢
+- **Accent:** Changes the UI's accent color. 🟢
+- **Keybind For UI:** Changes the UI's toggle keybind. 🟢
+- **Copy Discord:** Copies the Discord server invite link to the clipboard. 🟢
 
-* **Suspension:** Adjusts the stiffness of your vehicle's suspension. 🟢
-
-* **Horsepower:** Changes the horsepower of your vehicle, affecting its acceleration and power.
-
-* **Anti-Collision:** Disables collision for your vehicle, allowing you to drive through other vehicles and objects. 🟢
-
-* **Infinite Fuel:** Gives your vehicle unlimited fuel. 🟢
-
-
-**Weapons Tab:**
-
-* **Aimbot Section:**
-
-    * **Aimbot Enabled:** Activates the aimbot, automatically aiming at the closest enemy within your FOV. 🟢
-
-    * **Target Body Part:** Selects which body part the aimbot will target (Head or HumanoidRootPart). (Useless, you always want head) 🟢
-
-    * **Wall Check:**  If enabled, the aimbot will only target enemies that are not behind walls. 🟢
-
-    * **Team Check:** If enabled, the aimbot will not target players on your team. 🟢
-
-    * **Only Hostiles:** If enabled, the aimbot will only target players on enemy teams (Criminals, DOT, Fire). 🟢
-
-    * **FOV Circle:**  Adjusts the size of the aimbot's field of view. A larger FOV means the aimbot will target enemies further away. 🟢
-
-* **Weapon Modifications Section:**
-
-    * **Rapid Fire:**  Significantly increases the fire rate of your weapons.
-
-    * **Instant Reload:** Makes your weapons reload almost instantly.
-
-    * **Inf Ammo:** Gives you unlimited ammunition.
-
-    * **No Recoil:** Removes the recoil from your weapons, making them more accurate.
-
-
-**Teleports Tab:**
-
-* **Teleport Place:**  Select a location from the dropdown list to teleport to. 🟢
-
-* **Teleport With Vehicle:**  If enabled, your vehicle will teleport with you. 🟢
-
-* **Teleport:**  Initiates the teleport to the selected location. 🟢
-
-** Auto Tab **
-
-* **Auto-Arrest:** Automatically arrests the closest civilian with the highest wanted level. Due to how streaming enabled works, you might want to get inside your car and drive around the map because not all players are loaded. 🟢
- 
-* **Arrest Aura:** Automatically arrests all civilians near you. You have to be close, due to how the game works. Also, dont forget to equip your handcuffs. 🟢
-
-**Misc Tab:**
-
-* **Time Of Day:**  Changes the in-game time of day. 🟢
-
-* **ESP:**  Highlights players within a certain range, making them easier to see.  The closer a player is, the brighter the highlight. 🟢
-
-* **Invisible:** Makes you invisible. Press X to toggle invisibility on and off.  **WARNING: May be buggy and unreliable!** 🟢
-
-* **Respawn:** Kills your character and respawns you. 🟢
-
-* **Remove Street Lamps:** Removes all street lamps from the game. (So you can't crash) 🟢
-
-* **Remove Trees:** Removes all trees from the game. (Less lag + no crash) 🟢
-
-* **Remove Deployables:** Removes all deployable objects (like spike strips) from the game. 🟢
-
-* **Remove Traffic Detection:**  Removes traffic detection (speed) systems from the game. 🟢
-
-
-**GUI Tab:**
-
-* **Accent:** Changes the accent color of the GUI. 🟢
-
-* **Keybind For UI:**  Allows you to change the keybind used to open and close the GUI. 🟢
-
-* **Copy Discord:** Copies the Bulwark Discord server invite link to your clipboard. 🟢
-
-
-# **INSANELY IMPORTANT** #
-**--> Remember to use this script responsibly and be aware of the risks involved. Using blatant features can and will likely result in a ban. <---**
+**IMPORTANT Note:** Features marked with 🟢 are likely to be supported by Solara, while those without may require an executor with more advanced function support.
