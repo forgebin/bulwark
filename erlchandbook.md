@@ -20,8 +20,8 @@ This handbook provides a comprehensive overview of the features available in the
 
 **Vehicle Modifications:**
 
-- **(LEGACY) Max Speed:** Modifies vehicle speed. 🟢
-- **(LEGACY) Acceleration:** Modifies vehicle acceleration. 🟢
+- **(LEGACY) Max Speed:** Modifies vehicle speed. This has nothing to do with the actual max-speed. It only affects acceleration max-speed, at which one point it stops actually accelerating. 🟢
+- **(LEGACY) Acceleration:** Modifies vehicle acceleration, but not in a 'horsepower' way. 🟢
 - **Anti-Collision:** Disables collisions for other vehicles. 🟢
 - **Infinite Fuel:** Grants unlimited fuel. 🟢
 - **Fling Troll:** Allows flinging vehicles using the mouse. 🟢
