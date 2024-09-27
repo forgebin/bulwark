@@ -14,7 +14,7 @@ This handbook provides a comprehensive overview of the features available in the
 - **No Viewbobbing:** Removes the head bobbing effect while moving/driving at high speeds. 🟢
 - **No FallDamage/Ragdoll:** Disables fall damage and ragdoll physics. 🟢
 - **Always Allow Reset:** Overrides restrictions on character resets. 🟢
-- **No E Wait:** Removes interaction delays (e.g., for opening doors).
+- **No E Wait:** Removes interaction delays (e.g., for triggering alarms, bank doors).
 - **Fly:** Enables flying capabilities. 🟢 (BANNABLE, DO NOT USE IF THE ANTI CHEAT WAS NOT PATCHED)
 - **No-Clip:** Allows walking through walls and objects. 🟢
 
