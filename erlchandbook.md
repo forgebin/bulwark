@@ -24,7 +24,7 @@ This handbook provides a comprehensive overview of the features available in the
 - **(LEGACY) Acceleration:** Modifies vehicle acceleration, but not in a 'horsepower' way. 🟢
 - **Anti-Collision:** Disables collisions for other vehicles. 🟢
 - **Infinite Fuel:** Grants unlimited fuel. 🟢
-- **Fling Troll:** Allows flinging vehicles using the mouse. 🟢
+- **Fling Troll:** Allows flinging vehicles using the mouse. You have to hold F to bring the vehicle to your mouse, and it will start spinning. To fling vehicles, just move your mouse back-and-forth on a vehicle. Whenever you stop holding F, it will anchor the vehicle. Players who touch the vehicle will get flung (when its anchored). Absolutely perfect in public server, but in private servers you must be cautios as police can use the MDT to search people by vehicle. 🟢
 - **Always Slip:** Forces the vehicle to constantly drift. 🟢
 - **SteerMaxTorque:** Adjusts maximum steering torque.
 - **SteerSpeed:** Adjusts steering speed.
@@ -47,7 +47,7 @@ This handbook provides a comprehensive overview of the features available in the
 **Weapon Modifications:**
 
 - **Aimbot Enabled:** Enables or disables the aimbot. 🟢
-- **Target Body Part:** Selects the body part to aim at (Head or HumanoidRootPart). 🟢
+- **Target Body Part:** Selects the body part to aim at (Head or HumanoidRootPart). Kinda useless, who tf uses HRP 🟢
 - **Wall Check:** Enables or disables wall checks (aimbot). 🟢
 - **Team Check:** Enables or disables team checks (aimbot). 🟢
 - **Only Hostiles:** Enables or disables aiming at only hostile teams (aimbot). 🟢
