@@ -2015,3 +2015,4 @@ function library:AddWindow(title, options)
 
 	return window_data, Window
 end
+return library
