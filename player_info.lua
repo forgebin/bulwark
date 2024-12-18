@@ -1,7 +1,4 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
+-- why u peekin here?
 
 local GUI_Info = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
@@ -57,7 +54,7 @@ PlayerImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 PlayerImage.BorderColor3 = Color3.fromRGB(0, 0, 0)
 PlayerImage.BorderSizePixel = 0
 PlayerImage.Size = UDim2.new(0.105726875, 0, 0.0926640928, 0)
-PlayerImage.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+--PlayerImage.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
 
 UICorner_3.Parent = PlayerImage
 
@@ -106,7 +103,7 @@ ToolImage.BackgroundTransparency = 1.000
 ToolImage.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ToolImage.BorderSizePixel = 0
 ToolImage.Size = UDim2.new(0.125, 0, 1, 0)
-ToolImage.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+--ToolImage.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
 
 UICorner_7.Parent = ToolImage
 
