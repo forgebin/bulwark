@@ -1,88 +1,79 @@
 ## Bulwark ER:LC Handbook
+**Compatibility:**
 
-This handbook provides a comprehensive overview of the features available in the Bulwark cheat script for Emergency Response: Liberty County (ER:LC). Note that certain features may not be compatible with all executors, and some are specifically designed for internal cheats like Wave. Solara, a LuaU-based executor, may have limited support for certain features that rely on advanced functions.
-
-**Feature Breakdown:**
+-   🟢: Supported on Solara
+-   🔴: Unsupported on Solara
 
 **Character Modifications:**
 
-- **WalkSpeed:** Modifies the player's movement speed. 🟢 (BANNABLE, DO NOT USE IF THE ANTI CHEAT WAS NOT PATCHED)
-- **FOV:** Changes the field of view. 🟢
-- **Infinite Jump:** Enables continuous jumping. 🟢
-- **No Drown:** Prevents the player from taking drowning damage.
-- **Infinite Stamina:** Grants unlimited stamina. 
-- **No Viewbobbing:** Removes the head bobbing effect while moving/driving at high speeds. 🟢
-- **No FallDamage/Ragdoll:** Disables fall damage and ragdoll physics. 🟢
-- **Always Allow Reset:** Overrides restrictions on character resets. 🟢
-- **No E Wait:** Removes interaction delays (e.g., for triggering alarms, bank doors).
-- **Fly:** Enables flying capabilities. 🟢 (BANNABLE, DO NOT USE IF THE ANTI CHEAT WAS NOT PATCHED)
-- **No-Clip:** Allows walking through walls and objects. 🟢
+-   **WalkSpeed Boost:** Increases movement speed. 🟢
+-   **Anti Drown:** Prevents drowning damage. 🟢
+-   **No Viewbobbing:** Removes head bobbing effect. 🟢
+-   **Arrest Aura:** Automatically arrests nearby civilians. 🟢
+-   **Allow Vehicle Tool Push:** Allows being pushed by vehicle tools. 🟢
+-   **Anti Ragdoll:** Prevents ragdolling. 🟢
+-   **Infinite Stamina:** Grants unlimited stamina. 🔴
+-   **Prevent Anti Reset Callback:** Prevents character reset restrictions. 🟢
+-   **No-Clip:** Allows walking through walls. 🟢
+-   **No E Wait:** Removes interaction delays. 🔴
+-   **Safe Solver:** Automatically cracks safes. 🟢
+-   **ATM Solver:** Automatically hacks ATMs. 🟢
+-   **Jewelry Solver:** Automatically completes jewelry store robberies. 🟢
+-   **Lockpick Solver:** Automatically picks locks. 🟢
 
 **Vehicle Modifications:**
 
-- **(LEGACY) Max Speed:** Modifies vehicle speed. This has nothing to do with the actual max-speed. It only affects acceleration max-speed, at which one point it stops actually accelerating. 🟢
-- **(LEGACY) Acceleration:** Modifies vehicle acceleration, but not in a 'horsepower' way. 🟢
-- **Anti-Collision:** Disables collisions for other vehicles. 🟢
-- **Infinite Fuel:** Grants unlimited fuel. 🟢
-- **Fling Troll:** Allows flinging vehicles using the mouse. You have to hold F to bring the vehicle to your mouse, and it will start spinning. To fling vehicles, just move your mouse back-and-forth on a vehicle. Whenever you stop holding F, it will anchor the vehicle. Players who touch the vehicle will get flung (when its anchored). Absolutely perfect in public server, but in private servers you must be cautios as police can use the MDT to search people by vehicle. 🟢
-- **Always Slip:** Forces the vehicle to constantly drift. 🟢
-- **SteerMaxTorque:** Adjusts maximum steering torque.
-- **SteerSpeed:** Adjusts steering speed.
-- **BrakeForce:** Adjusts braking force.
-- **FSusStiffness:** Adjusts front suspension stiffness.
-- **RSusStiffness:** Adjusts rear suspension stiffness.
-- **Suspension Stiffness:** Adjusts overall suspension stiffness.
-- **Turbochargers:** Adjusts turbocharger settings (affects acceleration).
-- **Weight:** Adjusts vehicle weight (affects handling).
-- **RSteerMaxTorque:** Adjusts maximum rear steering torque.
-- **RSteerSpeed:** Adjusts rear steering speed.
-- **SteerRatio:** Adjusts steering ratio (affects handling).
-- **BrakeBias:** Adjusts brake balance between front and rear.
-- **Redline:** Adjusts maximum engine RPM.
-- **Horsepower:** Adjusts engine power.
-- **FinalDrive:** Adjusts gear ratio (affects top speed).
-- **T_Boost:** Adjusts boost multiplier.
-- **SuspensionDamping:** Adjusts suspension damping.
+-   **Speed Multiplier:** Increases vehicle speed. 🟢
+-   **Collisions Disabled:** Disables collisions with other vehicles. 🟢
+-   **Never Flip:** Prevents vehicle flipping. 🟢
+-   **Infinite Fuel:** Grants unlimited fuel. 🟢
+-   **Burnout Mode:** Forces constant tire slipping. 🟢
+-   **Permanent Horn:** Keeps the horn constantly on. 🟢
+-   **Slow Motion Vehicle:** Slows down vehicle physics. 🟢
+-   **Drive-Fling:** Flings players inside your vehicle. 🟢
+-   **Suspension Length:** Adjusts suspension length. 🟢
+-   **Suspension Stiffness:** Adjusts suspension stiffness. 🟢
+-   **Enabled (Fly):** Enables vehicle flying. 🟢
+-   **Flying Speed:** Adjusts vehicle flying speed. 🟢
 
 **Weapon Modifications:**
 
-- **Aimbot Enabled:** Enables or disables the aimbot. 🟢
-- **Target Body Part:** Selects the body part to aim at (Head or HumanoidRootPart). Kinda useless, who tf uses HRP 🟢
-- **Wall Check:** Enables or disables wall checks (aimbot). 🟢
-- **Team Check:** Enables or disables team checks (aimbot). 🟢
-- **Only Hostiles:** Enables or disables aiming at only hostile teams (aimbot). 🟢
-- **FOV Circle:** Adjusts the aimbot's field of view circle size. 🟢
-- **Rapid Fire:** Increases weapon fire rate.
-- **Instant Reload:** Makes reloading instantaneous.
-- **Inf Ammo:** Grants unlimited ammunition.
-- **No Recoil:** Removes weapon recoil.
+-   **Rapid Fire:** Increases weapon fire rate. 🔴
+-   **Instant Reload:** Makes reloading instant. 🔴
+-   **Inf Ammo:** Grants unlimited ammunition. 🔴
+-   **Fully Automatic:** Makes weapons fully automatic. 🔴
+-   **Triggerbot - First Person:** Automatically fires at enemies in first person. 🟢
+-   **Click - Kill:** Kills the targeted player or NPC. 🟢
+-   **Click - Explode Vehicle:** Explodes the targeted vehicle. 🟢
+-   **Click - Pop Tires:** Pops the tires of the targeted vehicle. 🟢
+-   **Kill Everyone:** Kills all players. 🟢
+-   **Enabled (Aimbot):** Enables aimbot. 🟢
+-   **Team Check:** Aimbot ignores teammates. 🟢
+-   **Hostile Only:** Aimbot targets only hostile players. 🟢
 
 **Teleports:**
 
-- **Teleport Place:** Select a location from the dropdown menu to teleport to. 🟢
-- **Teleport With Vehicle:** Enables or disables teleporting with the current vehicle. 🟢
-- **Teleport:** Executes the teleport action. 🟢
+-   **Select Place:** Selects a location to teleport to. 🟢
+-   **Teleport To Waypoint:** Teleports to the set waypoint. 🟢
+-   **Teleport:** Executes the teleport. 🟢
 
 **Miscellaneous:**
 
-- **Time Of Day:** Changes the in-game time. 🟢
-- **ESP:** Enables or disables ESP to see players through walls. 🟢
-- **Tracers:** Enables or disables tracers that draw lines to players. 🟢
-- **Invisible:** Enables the ability to become invisible by pressing X. 🟢
-- **Auto-Arrest:** Enables or disables automatic arrest of the highest-wanted player. 🟢
-- **Arrest Aura:** Enables or disables arrest aura that arrests all nearby civilians. 🟢
-- **Guaranteed Lockpick:** Ensures successful lockpicking attempts.
-- **Guaranteed Glass Cut:** Ensures successful jewelry store robberies.
-- **Respawn:** Instantly respawns the player. 🟢
-- **Remove Street Lamps:** Removes all street lamps from the map. 🟢
-- **Remove Trees:** Removes all trees from the map. 🟢
-- **Remove Deployables:** Removes all deployables from the map. 🟢
-- **Remove Traffic Detection:** Removes traffic detection systems and traffic lights. 🟢
+-   **Kill Yourself:** Kills your character. 🟢
+-   **Equip a basketball:** Gives the player a basketball. 🟢
+-   **No Street Lamps:** Removes all street lamps. 🟢
+-   **No Trees:** Removes all trees. 🟢
+-   **No DOT/Police Deployables:** Removes DOT and police deployables. 🟢
+-   **Anti Traffic Detection:** Removes traffic detection and lights. 🟢
+-   **Improve FPS:** Attempts to improve FPS. 🟢
+-   **Lock Map Contents:** Locks map streaming. 🟢
+-   **Show Everyone On Map:** Reveals all players on the map. 🟢
+-   **Fast Physics Simulation:** Speeds up physics calculations. 🟢
+-   **Full Bright:** Makes the environment fully bright. 🟢
+-   **Freecam:** Enables freecam mode. 🟢
 
-**GUI Settings:**
+**Visual:**
 
-- **Accent:** Changes the UI's accent color. 🟢
-- **Keybind For UI:** Changes the UI's toggle keybind. 🟢
-- **Copy Discord:** Copies the Discord server invite link to the clipboard. 🟢
-
-**IMPORTANT Note:** Features marked with 🟢 are likely to be supported by Solara, while those without may require an executor with more advanced function support.
+-   **Extra Sensory Perception:** Enables ESP to see players through walls. 🟢
+-   **Visualize All Vehicles:** Enables ESP for all vehicles. 🟢
+-   **Open Admin Logs:** Opens the admin command logs. 🟢
