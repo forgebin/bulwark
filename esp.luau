@@ -13,16 +13,16 @@ local RunService = game:GetService("RunService")
 -- Default configuration
 local config = {
     MaxHighlights = 30,               -- Maximum number of concurrent highlights
-    UpdateInterval = 0.1,               -- How often to update highlights (seconds)
-    OutlineTransparency = 0.5,          -- Transparency of the outline
-    FillTransparency = 0.8,             -- Transparency of the fill
-    OutlineColor = Color3.new(1,1,1),   -- Default outline color (white)
-    UseTeamColor = true,                -- Whether to use player team colors
-    DefaultColor = Color3.new(1,0,0),   -- Default color if not using team colors
-    Enabled = true,                     -- Whether ESP is initially enabled
-    DistanceCheck = true,               -- Whether to prioritize closer players
-    MaxDistance = 1000,                 -- Maximum distance to render ESP (studs)
-    HighlightParent = nil,              -- Parent for Highlight instances (nil = character)
+    UpdateInterval = 0.1,             -- How often to update highlights (seconds)
+    OutlineTransparency = 0.5,        -- Transparency of the outline
+    FillTransparency = 0.8,           -- Transparency of the fill
+    OutlineColor = Color3.new(1,1,1), -- Default outline color (white)
+    UseTeamColor = true,              -- Whether to use player team colors
+    DefaultColor = Color3.new(1,0,0), -- Default color if not using team colors
+    Enabled = true,                   -- Whether ESP is initially enabled
+    DistanceCheck = true,             -- Whether to prioritize closer players
+    MaxDistance = 1000,               -- Maximum distance to render ESP (studs)
+    HighlightParent = nil,            -- Parent for Highlight instances (nil = character)
 }
 
 -- Internal variables
@@ -51,7 +51,9 @@ end
 
 -- Color cache to avoid creating new Color3 objects
 local colorCache = {}
-local function getTeamColor(team)
+local function getTeamColor(player)
+    if not player or not config.UseTeamColor then return config.DefaultColor end
+    local team = player.Team
     if not team then return config.DefaultColor end
     local cacheKey = tostring(team.TeamColor)
     if not colorCache[cacheKey] then
@@ -79,7 +81,10 @@ end
 local highlightPool = {}
 local function createHighlight()
     if #highlightPool > 0 then
-        return tableRemove(highlightPool)
+        local highlight = tableRemove(highlightPool)
+        highlight.Adornee = nil
+        highlight.Parent = nil
+        return highlight
     end
     local highlight = Instance.new("Highlight")
     highlight.OutlineTransparency = config.OutlineTransparency
@@ -90,7 +95,13 @@ end
 
 -- Main update function
 local function updateESP()
-    if not config.Enabled then return end
+    if not config.Enabled then 
+        -- Clean up all highlights if ESP is disabled
+        for player in pairs(highlights) do
+            cleanupHighlight(player)
+        end
+        return 
+    end
     
     local localPlayer = Players.LocalPlayer
     if not localPlayer then return end
@@ -147,14 +158,10 @@ local function updateESP()
             highlights[player] = createHighlight()
             highlights[player].Adornee = player.Character
             highlights[player].Parent = config.HighlightParent or player.Character
-            
-            -- Set color
-            if config.UseTeamColor then
-                highlights[player].FillColor = getTeamColor(player.Team)
-            else
-                highlights[player].FillColor = config.DefaultColor
-            end
         end
+        
+        -- Always update color in case team changed
+        highlights[player].FillColor = getTeamColor(player)
         
         activeHighlights = activeHighlights + 1
         
@@ -191,6 +198,11 @@ local function manageHeartbeat()
                 updateESP()
             end
         end)
+    else
+        -- Clean up all highlights when disabled
+        for player in pairs(highlights) do
+            cleanupHighlight(player)
+        end
     end
 end
 
@@ -210,11 +222,7 @@ function UltraFastESP.configure(newConfig)
     -- Update existing highlights if color settings changed
     if newConfig.UseTeamColor ~= nil or newConfig.DefaultColor ~= nil then
         for player, highlight in pairs(highlights) do
-            if config.UseTeamColor then
-                highlight.FillColor = getTeamColor(player.Team)
-            else
-                highlight.FillColor = config.DefaultColor
-            end
+            highlight.FillColor = getTeamColor(player)
         end
     end
     
